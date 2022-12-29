@@ -44,9 +44,21 @@ let words = ['red', 'green', 'blue'];
 //let foundWord;
 let foundWord: boolean;
 
-for (let i = 0; i < words.length; i++) {
+for (let i: number = 0; i < words.length; i++) {
     if (words[i] === 'green') {
         foundWord = true;
-        console.log(foundWord);
+        //console.log(foundWord);
+    }
+}
+
+//  3-) When Variable can not be inferred correctly
+let numbers = [-19, -11, -23];
+//let numbersAboveZero = false; // But if some number Its found, return thoose numbers them selfs.
+let numbersAboveZero: boolean | number = false; // But if some number Its found, return thoose numbers them selfs.
+
+for (let i: number = 0; i < numbers.length; i++) {
+    if (numbers[i] > 0) {
+        numbersAboveZero = numbers[i];
+        console.log(numbersAboveZero);
     }
 }

@@ -27,6 +27,26 @@ let point: { x: number; y: number } = {
 };
 
 //Functions type anotation
+// Annotation around functions
 const logNumber: (i: number) => void = (i: number) => {
     console.log(i);
 };
+
+// When use annotations
+// 1-) Functions that returns the 'any' type
+// 2-)
+const json = '{"x":10,"y":200}';
+//const coordinates: any = JSON.parse(json);
+const coordinates: { x: number; y: number } = JSON.parse(json); // Fixing the 'any' typing problem
+//console.log(coordinates);
+// When declare a variable on one line and initializate it later.
+let words = ['red', 'green', 'blue'];
+//let foundWord;
+let foundWord: boolean;
+
+for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'green') {
+        foundWord = true;
+        console.log(foundWord);
+    }
+}

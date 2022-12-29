@@ -59,6 +59,11 @@ let numbersAboveZero: boolean | number = false; // But if some number Its found,
 for (let i: number = 0; i < numbers.length; i++) {
     if (numbers[i] > 0) {
         numbersAboveZero = numbers[i];
-        console.log(numbersAboveZero);
+        //console.log(numbersAboveZero);
     }
 }
+
+// More annotations around functions
+const add = (a: number, b: number): number => {
+    return a + b;
+};

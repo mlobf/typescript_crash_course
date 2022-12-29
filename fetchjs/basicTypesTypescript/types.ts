@@ -67,3 +67,11 @@ for (let i: number = 0; i < numbers.length; i++) {
 const add = (a: number, b: number): number => {
     return a + b;
 };
+
+function subtract(a: number, b: number): number {
+    return a - b;
+}
+
+const divided = function (a: number, b: number): number {
+    return a / b;
+};
